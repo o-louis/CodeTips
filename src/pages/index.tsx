@@ -1,3 +1,6 @@
+import PostItem from "../components/PostItem";
+import { posts } from "../getAllPosts";
+
 const Index = () => {
   return (
     <div>
@@ -16,6 +19,11 @@ const Index = () => {
 
       <section className="py-10 mx-auto w-10/12">
         <h1 className="text-2xl font-semibold">Latest Articles</h1>
+        <div>
+          {posts.map((post: any) => (
+            <PostItem key={post.link} post={post} />
+          ))}
+        </div>
       </section>
     </div>
   );
