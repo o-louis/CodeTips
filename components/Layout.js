@@ -1,13 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
 
-type Props = {
-  children: any;
-  pageTitle: string;
-  description: string;
-};
-
-const Layout: React.FC<Props> = ({ children, pageTitle, description }) => (
+const Layout = ({ children, pageTitle, description }) => (
   <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
