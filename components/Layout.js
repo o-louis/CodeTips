@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 const Layout = ({ children, pageTitle, description }) => (
   <>
@@ -13,9 +14,12 @@ const Layout = ({ children, pageTitle, description }) => (
       ></link>
       <title>{pageTitle}</title>
     </Head>
-    <div className="">
-      <Header />
-      <div className="">{children}</div>
+    <div className="flex w-full">
+      <Sidebar />
+      <div className="w-full">
+        <Header />
+        <div className="">{children}</div>
+      </div>
     </div>
   </>
 );
