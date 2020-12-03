@@ -3,26 +3,30 @@ import { posts } from "../getAllPosts";
 
 const Index = () => {
   return (
-    <div>
-      <section className="">
-        <header className="">
-          <h1 className="">Welcome to you all </h1>
-          <p className="">
-            Here you'll find all my articles about my personal development
-            journey
-          </p>
-          <p className="">
-            I hope you'll like them and they'll be valuable to you
-          </p>
-        </header>
-      </section>
+    <div className="py-8">
+      <section className="m-auto w-10/12 text-blue-900 text-lg">
+        <h1 className="text-3xl font-bold text-blue-600 pb-1 md:text-4xl">
+          JavaScript Tips
+        </h1>
+        <h2 className="text-2xl font-semibold text-blue-500 md:text-3xl">
+          Best Practices
+          <br></br>to simplify your code
+        </h2>
 
-      <section className="">
-        <h1 className="">Latest Articles</h1>
-        <div>
-          {posts.map((post) => (
-            <PostItem key={post.link} post={post} />
-          ))}
+        <div className="md:flex md: flex-row-reverse">
+          <div className="pt-4">
+            <img src="./illustration_home.png" />
+          </div>
+          <section>
+            <p className="pt-6 pb-4">
+              As a developer, we spend our time searching on google (even basic
+              concepts..) and thus I've decided to create a census that gather
+              all the JavaScript Fundamentals for saving time.
+            </p>
+            <p>
+              I hope you'll find everything you're looking for and more ! 🚀
+            </p>
+          </section>
         </div>
       </section>
     </div>
