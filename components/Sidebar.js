@@ -5,8 +5,8 @@ const Sidebar = ({ showMenu, closeMenu }) => {
   return (
     <aside
       className={
-        (showMenu ? "" : "hidden") +
-        " flex flex-col fixed top-0 w-2/4 h-screen bg-blue-600 text-white py-3 sm:max-w-xs md:relative md:inline-block"
+        "transition-transform duration-300 transform flex flex-col fixed top-0 w-2/4 h-screen bg-blue-600 text-white py-3 sm:max-w-xs md:relative md:inline-block md:translate-x-0 " +
+        (showMenu ? "translate-x-0" : "-translate-x-full")
       }
     >
       <div
