@@ -1,13 +1,33 @@
 import Link from "next/link";
 import { posts } from "../getAllPosts";
-const Sidebar = () => {
+const Sidebar = ({ showMenu, closeMenu }) => {
   console.log(posts);
   return (
-    <aside className="fixed top-0 w-2/4 h-screen bg-blue-600 text-white px-6 py-3 sm:max-w-xs md:relative">
+    <aside
+      className={
+        (showMenu ? "" : "hidden") +
+        " flex flex-col fixed top-0 w-2/4 h-screen bg-blue-600 text-white py-3 sm:max-w-xs md:relative md:inline-block"
+      }
+    >
+      <div
+        className="self-end relative right-3 cursor-pointer rounded-full p-1 hover:bg-blue-500 md:hidden"
+        onClick={closeMenu}
+      >
+        <img
+          src="https://s.svgbox.net/hero-outline.svg?ic=x&fill=ffffff"
+          width="32"
+          height="32"
+        />
+      </div>
       <ul>
         {posts.map((post) => (
-          <li key={post.link}>
-            <Link href={post.link}>{post.module.meta.title}</Link>
+          <li
+            className="border-b py-3 divide-gray-50 text-sm font-semibold hover:text-yellow-200 transition-colors ease-in-out"
+            key={post.link}
+          >
+            <Link className="px-6" href={"/posts" + post.link}>
+              {post.module.meta.title}
+            </Link>
           </li>
         ))}
       </ul>
