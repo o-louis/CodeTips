@@ -13,9 +13,9 @@ const Layout = ({ children, pageTitle, description }) => (
       ></link>
       <title>{pageTitle}</title>
     </Head>
-    <div className="container">
+    <div className="">
       <Header />
-      <div className="pt-16">{children}</div>
+      <div className="">{children}</div>
     </div>
   </>
 );

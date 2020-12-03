@@ -10,7 +10,7 @@ const PostItem = ({ post }) => {
     <>
       <article>
         <h1>{meta.title}</h1>
-        <div className="details">
+        <div className="">
           <span>{meta.date}</span>
         </div>
         <Link href={"/posts" + link}>

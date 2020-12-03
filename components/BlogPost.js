@@ -1,8 +1,8 @@
 export default function BlogPost({ children, meta }) {
   return (
-    <section className="prose lg:prose-xl">
+    <section className="">
       <h1>{meta.title}</h1>
-      <div className="details">
+      <div className="">
         <span>{meta.date}</span>
       </div>
       <article>{children}</article>
