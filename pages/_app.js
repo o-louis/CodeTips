@@ -5,7 +5,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Layout
       pageTitle="Code Daily"
-      description="Ressources to code properly and efficiently in Javascript"
+      description="Best practices, Must-Know, Useful Tips in JavaScript"
     >
       <Component {...pageProps} />
     </Layout>
