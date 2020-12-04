@@ -1,7 +1,7 @@
 const Index = () => {
   return (
     <div className="py-8">
-      <section className="m-auto w-10/12 text-blue-900 text-lg">
+      <section className="m-auto w-10/12 text-blue-900 text-lg md:w-11/12">
         <h1 className="text-3xl font-bold text-blue-600 pb-1 sm:text-4xl lg:text-5xl">
           JavaScript Tips
         </h1>

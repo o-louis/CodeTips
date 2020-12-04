@@ -3,7 +3,7 @@ import Link from "next/link";
 const Header = ({ handleClick }) => {
   return (
     <nav className="py-3 bg-blue-100 text-blue-600 text-xl w-full">
-      <div className="m-auto w-10/12 flex justify-between items-center">
+      <div className="m-auto w-10/12 flex justify-between items-center md:w-11/12">
         <div className="font-bold ">
           <Link href="/">CodeDaily</Link>
         </div>
