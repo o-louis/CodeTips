@@ -25,6 +25,7 @@ const Sidebar = ({ showMenu, closeMenu }) => {
           <li
             className="py-3 divide-gray-50 text-sm font-semibold hover:text-yellow-200 transition-colors ease-in-out"
             key={post.link}
+            onClick={closeMenu}
           >
             <Link className="px-6" href={"/posts" + post.link}>
               {post.module.meta.title}

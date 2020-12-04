@@ -11,6 +11,10 @@ const Layout = ({ children, pageTitle, description }) => {
     setShowMenu(true);
   };
 
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+
   return (
     <>
       <Head>
@@ -24,7 +28,7 @@ const Layout = ({ children, pageTitle, description }) => {
         <title>{pageTitle}</title>
       </Head>
       <div className="flex w-full">
-        <Sidebar showMenu={showMenu} closeMenu={() => setShowMenu(false)} />
+        <Sidebar showMenu={showMenu} closeMenu={closeMenu} />
         <div className="w-full">
           <Header handleClick={openMenu} />
           <div className="">{children}</div>
