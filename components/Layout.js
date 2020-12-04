@@ -30,7 +30,7 @@ const Layout = ({ children, pageTitle, description }) => {
       <div className="flex w-full">
         <Sidebar showMenu={showMenu} closeMenu={closeMenu} />
         <div className="w-full">
-          <Header handleClick={openMenu} />
+          <Header openMenu={openMenu} />
           <div className="">{children}</div>
         </div>
       </div>
