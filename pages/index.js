@@ -14,7 +14,7 @@ const Index = () => {
           <div className="pt-4 max-w-sm self-end md:max-w-md">
             <img src="./illustration_home.png" />
           </div>
-          <section className="md:max-w-xl text-md lg:text-xl">
+          <section className="md:max-w-xl lg:text-xl">
             <p className="pt-6 pb-6 leading-relaxed">
               As a developer, we spend our time searching on google (even basic
               concepts..) and thus I've decided to create a census that gather

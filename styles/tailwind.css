@@ -17,24 +17,19 @@ aside li > a {
   white-space: pre-wrap !important;
 }
 
-article h1 {
-}
-
-article h2 {
-}
-
-article h3 {
-}
-
-article p {
-}
-
 article pre {
-  @apply py-4 my-6 !important;
+  @apply p-4 my-6 text-sm !important;
 }
 
 /* sm */
 @media (min-width: 640px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+  article pre {
+    @apply text-base !important;
+  }
 }
 
 /* lg */

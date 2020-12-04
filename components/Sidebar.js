@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { posts } from "../getAllPosts";
+
 const Sidebar = ({ showMenu, closeMenu }) => {
   console.log(posts);
   return (
