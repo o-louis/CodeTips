@@ -17,8 +17,30 @@ aside li > a {
   white-space: pre-wrap !important;
 }
 
+article li,
+article ol {
+  list-style: decimal;
+  @apply ml-3;
+}
+
+article p {
+  @apply py-4 !important;
+}
+
 article pre {
-  @apply p-4 my-6 text-sm !important;
+  @apply p-4 text-sm !important;
+}
+
+article li pre {
+  @apply -ml-3 !important;
+}
+
+article a {
+  @apply italic text-blue-400 cursor-pointer !important;
+}
+
+article li {
+  @apply mb-4;
 }
 
 /* sm */

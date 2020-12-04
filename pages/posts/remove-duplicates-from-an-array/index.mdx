@@ -5,22 +5,31 @@ import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 export const meta = {
   title: "Remove duplicates from an array",
   description: "Getting started with the Next framework",
-  date: "Aug 04, 2020",
 };
-
-export const code = `const  numbers = [2, 7, 8, 2, 5, 1, 5];
-const uniqueNumbers = Array.from(new Set(countries));\n
-// returns [2, 7, 8, 5, 1];`;
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 
-To extract the unique values from array, there are two solutions using the ["Set"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object.
+To extract the unique values from array, there are two solutions using the [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object.
 Set is a data structure that lets you store unique values of any type.
 
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
-  {code}
-</SyntaxHighlighter>
+1. Using Array.from
+   <SyntaxHighlighter
+     language="javascript"
+     style={shadesOfPurple}
+     className="syntaxhighlighter font-sans rounded-md"
+   >
+     {`const  numbers = [2, 7, 8, 2, 5, 1, 5];
+const uniqueNumbers = Array.from(new Set(numbers));\n
+// returns [2, 7, 8, 5, 1];`}
+   </SyntaxHighlighter>
+
+2. Using spread operator
+   <SyntaxHighlighter
+     language="javascript"
+     style={shadesOfPurple}
+     className="syntaxhighlighter font-sans rounded-md"
+   >
+     {`const  numbers = [2, 7, 8, 2, 5, 1, 5];
+const uniqueNumbers = [...new Set(numbers)];\n
+// returns [2, 7, 8, 5, 1];`}
+   </SyntaxHighlighter>
