@@ -29,7 +29,7 @@ const Layout = ({ children, pageTitle, description }) => {
       </Head>
       <div className="flex w-full">
         <Sidebar showMenu={showMenu} closeMenu={closeMenu} />
-        <div className="w-full">
+        <div className="w-full md:ml-60">
           <Header openMenu={openMenu} />
           <div className="">{children}</div>
         </div>
