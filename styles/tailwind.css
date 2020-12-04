@@ -13,6 +13,9 @@ aside li > a {
 }
 
 /* Markdown */
+.syntaxhighlighter code {
+  white-space: pre-wrap !important;
+}
 
 article h1 {
 }
@@ -24,6 +27,10 @@ article h3 {
 }
 
 article p {
+}
+
+article pre {
+  @apply py-4 my-6 !important;
 }
 
 /* sm */

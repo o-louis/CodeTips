@@ -1,0 +1,23 @@
+import BlogPost from "../../../components/BlogPost";
+import { LightAsync as SyntaxHighlighter } from "react-syntax-highlighter";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
+export const meta = {
+  title: "Remove duplicates from an array",
+  description: "Getting started with the Next framework",
+  date: "Aug 04, 2020",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+To extract the unique values from array, there are two solutions using the ["Set"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object. It's a data structure that lets you store unique values of any type.
+
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter"
+>
+  const countries = ["USA", "Japan", "France", "Italy", "Japan", "Russia",
+  "Italy"]; const uniqueCountries = Array.from(new Set(countries)); // returns
+  ["USA", "Japan", "France", "Italy", "Russia"]
+</SyntaxHighlighter>
