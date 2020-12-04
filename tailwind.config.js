@@ -8,7 +8,11 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        xs: "15rem",
+      },
+    },
   },
   variants: {},
   plugins: [require("@tailwindcss/ui")],
