@@ -1,0 +1,26 @@
+import BlogPost from "../../../components/BlogPost";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
+export const meta = {
+  title: "Array - remove duplicates",
+  description: "Remove dupplicates from array",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+To extract the unique values from array, there are two solutions using the [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object.
+Set is a data structure that lets you store unique values of any type.
+
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter font-sans rounded-md"
+>
+  {`const  numbers = [2, 7, 8, 2, 5, 1, 5];\n
+// 1. Using Array.from
+Array.from(new Set(numbers))\n
+// 2. Using spread operator
+[...new Set(numbers)]\n
+// Result ➔ [2, 7, 8, 5, 1]`}
+</SyntaxHighlighter>
