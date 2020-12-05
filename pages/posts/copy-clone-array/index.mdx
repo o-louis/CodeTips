@@ -1,0 +1,26 @@
+import BlogPost from "../../../components/BlogPost";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
+export const meta = {
+  title: "Array - Copy/Clone array",
+  description: "Copy or clone an array without mutate",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+Cloning array with **concat()**, **slice()** or **spread operator**
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter font-sans rounded-md"
+>
+  {`const numbers = [2, 4, 6, 8, 10];\n
+// 1. with concat
+const copy = [].concat(numbers);\n
+// 2. with slice
+const copy = numbers.slice();\n
+// 2. with spread operator
+const copy = [...numbers];\n
+// ➔ copy = [2, 4, 6, 8, 10]`}
+</SyntaxHighlighter>
