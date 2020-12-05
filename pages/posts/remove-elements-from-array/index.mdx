@@ -12,47 +12,47 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 It exists different methods to removing element from an array.
 
 1. Remove the first element - **shift()**
-   <SyntaxHighlighter
-     language="javascript"
-     style={shadesOfPurple}
-     className="syntaxhighlighter font-sans rounded-md"
-   >
-     {`const things = ["knife", "bottle", "keyboard", "table", "tv"];
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter font-sans rounded-md"
+>
+  {`const things = ["knife", "bottle", "keyboard", "table", "tv"];
 things.shift();\n
 // ➔ ["bottle", "keyboard", "table", "tv"]`}
-   </SyntaxHighlighter>
+</SyntaxHighlighter>
 
 2. Remove the last element - **pop()**
-   <SyntaxHighlighter
-     language="javascript"
-     style={shadesOfPurple}
-     className="syntaxhighlighter font-sans rounded-md"
-   >
-     {`const things = ["knife", "bottle", "keyboard", "table", "tv"];
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter font-sans rounded-md"
+>
+  {`const things = ["knife", "bottle", "keyboard", "table", "tv"];
 things.pop();\n
 // ➔ ["knife", "bottle", "keyboard", "table"]`}
-   </SyntaxHighlighter>
+</SyntaxHighlighter>
 
 3. Remove from a specific index - **splice()**
-   <SyntaxHighlighter
-     language="javascript"
-     style={shadesOfPurple}
-     className="syntaxhighlighter font-sans rounded-md"
-   >
-     {`const arr = ["toto", "tata", "tutu", "tete"];
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter font-sans rounded-md"
+>
+  {`const arr = ["toto", "tata", "tutu", "tete"];
 const index = 2;
 arr.splice(index, 1);\n
 // ➔ ["toto", "tata", "tete"]`}
-   </SyntaxHighlighter>
+</SyntaxHighlighter>
 
 4. Remove element by value - **filter()**
-   <SyntaxHighlighter
-     language="javascript"
-     style={shadesOfPurple}
-     className="syntaxhighlighter font-sans rounded-md"
-   >
-     {`const fruits = ["apple", "orange", "pear", "banana", "coconut", "peach"];
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter font-sans rounded-md"
+>
+  {`const fruits = ["apple", "orange", "pear", "banana", "coconut", "peach"];
 const fruitToRemove = "pear";
 const filtered = fruits.filter(item => item !== fruitToRemove);\n
 // ➔ filtered = ["apple", "orange", "banana", "coconut", "peach"]`}
-   </SyntaxHighlighter>
+</SyntaxHighlighter>
