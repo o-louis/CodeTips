@@ -3,24 +3,21 @@ import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export const meta = {
-  title: "Array - copy/clone array",
-  description: "Copy or clone an array without mutate",
+  title: "Array - create a new array from the initial one",
+  description: "Create a new array from the initial one",
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 
-Cloning array with **concat()**, **slice()** or **spread operator** without mutate the initial one
+The function **map()** return a new array from the initial one where the result is building by perfoming anything
+you want on each element.
+
 <SyntaxHighlighter
   language="javascript"
   style={shadesOfPurple}
   className="syntaxhighlighter font-sans rounded-md"
 >
-  {`const numbers = [2, 4, 6, 8, 10];\n
-// 1. with concat
-const copy = [].concat(numbers);\n
-// 2. with slice
-const copy = numbers.slice();\n
-// 2. with spread operator
-const copy = [...numbers];\n
-// ➔ copy = [2, 4, 6, 8, 10]`}
+  {`const numbers = [1, 2, 3, 4, 5, 6];
+const even = numbers.map(number => number*2);\n
+// even = [2, 4, 6, 8, 10, 12]`}
 </SyntaxHighlighter>
