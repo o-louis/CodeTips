@@ -1,0 +1,28 @@
+import BlogPost from "../../../components/BlogPost";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+
+export const meta = {
+  title: "String - extract part",
+  description: "Extract part of a string",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+There are two ways to extract part of a string.
+
+**substr()** begins at the character specified position and returns the specified number of characters.
+**substring()** returns the part of the string between the start and end indexes, or to the end of the string
+
+<SyntaxHighlighter
+  language="javascript"
+  style={shadesOfPurple}
+  className="syntaxhighlighter font-sans rounded-md"
+>
+  {`const str = "Hello World !"\n
+// 1. substr(start, length)
+const word = str.substr(6, 5);\n
+// 2. substring(start, end)
+const word = str.substring(6, 11);\n
+// -> word = "World"`}
+</SyntaxHighlighter>
