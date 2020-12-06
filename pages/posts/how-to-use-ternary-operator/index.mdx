@@ -1,0 +1,27 @@
+import BlogPost from "../../../components/BlogPost";
+import Code from "../../../components/Code";
+
+export const meta = {
+  title: "How to use ternary operator",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+[Ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) is a substitute of the if/else statement. This is the only operator that use three operands.
+
+**`<condition> ? <value if true> : <value if false>`**
+
+If/Else :
+
+<Code>
+  {`let movie;
+if (horrorMovie) {
+  movie = "Rec";
+} else {
+  movie = "Spiderman";
+}`}
+</Code>
+
+Can be shortened like this :
+
+<Code>{`const movie = horrorMovie ? "Rec" : "Spiderman";`}</Code>
