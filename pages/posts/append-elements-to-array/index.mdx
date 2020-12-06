@@ -1,6 +1,5 @@
 import BlogPost from "../../../components/BlogPost";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Code from "../../../components/Code";
 
 export const meta = {
   title: "Array - append item",
@@ -10,44 +9,33 @@ export const meta = {
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 
 1. Add element to the beginning - **unshift()**
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
-  {`const countries = ["USA", "Japan", "France", "England"];
+<Code>{
+`const countries = ["USA", "Japan", "France", "England"];
 countries.unshift("Australia", "China");\n
-// ➔ ["Australia", "China", "USA", "Japan", "France", "England"]`}
-</SyntaxHighlighter>
+// ➔ ["Australia", "China", "USA", "Japan", "France", "England"]`
+}</Code>
 
 2. Add element to the end<br /><br />
-**mutate the original array**
-<SyntaxHighlighter
-language="javascript"
-style={shadesOfPurple}
-className="syntaxhighlighter font-sans rounded-md"
->
-{`const countries = ["USA", "Japan", "France", "England"];\n
+  **mutate the original array**
+<Code>{
+`const countries = ["USA", "Japan", "France", "England"];\n
 // 1. with push
 countries.push("Italy", "Russia");\n
 // 2. with spread features
 const coolCountries = ["Italy", "Russia"];
-countries.push(...coolCountries);\n
+//
+const countries = "hey";
 // 3. with splice
 countries.splice(countries.length, 0, 'Italy', 'Russia');\n
-// ➔ ["USA", "Japan", "France", "England", "Italy", "Russia"]`}
-</SyntaxHighlighter>
+// ➔ ["USA", "Japan", "France", "England", "Italy", "Russia"]`
+}</Code>
 
-**non-mutate the original array and create a new one**
-<SyntaxHighlighter
-language="javascript"
-style={shadesOfPurple}
-className="syntaxhighlighter font-sans rounded-md"
->
-{`const countries = ["USA", "Japan", "France", "England"];\n
+  **non-mutate the original array and create a new one**
+<Code>{
+`const countries = ["USA", "Japan", "France", "England"];\n
 // 1. spread
 const arr = [...countries, "Italy", "Russia"];\n
 // 2. concat
 const arr = countries.concat("Italy", "Russia");\n
-// ➔ arr = ["USA", "Japan", "France", "England", "Italy", "Russia"]`}
-</SyntaxHighlighter>
+// ➔ arr = ["USA", "Japan", "France", "England", "Italy", "Russia"]`
+}</Code>

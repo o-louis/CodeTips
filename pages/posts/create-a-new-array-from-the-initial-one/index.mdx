@@ -1,6 +1,5 @@
 import BlogPost from "../../../components/BlogPost";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Code from "../../../components/Code";
 
 export const meta = {
   title: "Array - create a new array from the initial one",
@@ -12,12 +11,8 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 The function **map()** return a new array from the initial one where the result is building by perfoming anything
 you want on each element.
 
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
+<Code>
   {`const numbers = [1, 2, 3, 4, 5, 6];
 const even = numbers.map(number => number*2);\n
 // even = [2, 4, 6, 8, 10, 12]`}
-</SyntaxHighlighter>
+</Code>

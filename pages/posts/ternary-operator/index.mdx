@@ -1,6 +1,5 @@
 import BlogPost from "../../../components/BlogPost";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Code from "../../../components/Code";
 
 export const meta = {
   title: "Ternary operator",
@@ -11,26 +10,18 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 
 Ternary operator is a substitute of the if/else statement.
 
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
+<Code>
   {`let movie;
 if (horrorMovie) {
   movie = "Rec";
 } else {
   movie = "Spiderman";
 }`}
-</SyntaxHighlighter>
+</Code>
 
 Can be shortened like this :
 
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
+<Code>
   {`// condition ? exprIfTrue : exprIfFalse
 const movie = horrorMovie ? "Rec" : "Spiderman";`}
-</SyntaxHighlighter>
+</Code>

@@ -1,6 +1,5 @@
 import BlogPost from "../../../components/BlogPost";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import Code from "../../../components/Code";
 
 export const meta = {
   title: "Array - remove item",
@@ -12,47 +11,31 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 It exists different methods to removing element from an array.
 
 1. Remove the first element - **shift()**
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
+<Code>
   {`const things = ["knife", "bottle", "keyboard", "table", "tv"];
 things.shift();\n
 // ➔ ["bottle", "keyboard", "table", "tv"]`}
-</SyntaxHighlighter>
+</Code>
 
 2. Remove the last element - **pop()**
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
+<Code>
   {`const things = ["knife", "bottle", "keyboard", "table", "tv"];
 things.pop();\n
 // ➔ ["knife", "bottle", "keyboard", "table"]`}
-</SyntaxHighlighter>
+</Code>
 
 3. Remove from a specific index - **splice()**
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
+<Code>
   {`const arr = ["toto", "tata", "tutu", "tete"];
 const index = 2;
 arr.splice(index, 1);\n
 // ➔ ["toto", "tata", "tete"]`}
-</SyntaxHighlighter>
+</Code>
 
 4. Remove element by value - **filter()**
-<SyntaxHighlighter
-  language="javascript"
-  style={shadesOfPurple}
-  className="syntaxhighlighter font-sans rounded-md"
->
+<Code>
   {`const fruits = ["apple", "orange", "pear", "banana", "coconut", "peach"];
 const fruitToRemove = "pear";
 const filtered = fruits.filter(item => item !== fruitToRemove);\n
 // ➔ filtered = ["apple", "orange", "banana", "coconut", "peach"]`}
-</SyntaxHighlighter>
+</Code>
