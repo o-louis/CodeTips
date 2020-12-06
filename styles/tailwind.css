@@ -17,7 +17,7 @@ aside li > a {
 }
 
 /* Markdown */
-.syntaxhighlighter code {
+.syntaxhighlighter {
   white-space: pre-wrap !important;
 }
 
