@@ -10,7 +10,7 @@ export default function Code({ children }) {
       language="javascript"
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={`${className} syntaxhighlighter`} style={style}>
+        <pre className={`${className} syntaxhighlighter rounded-lg`} style={style}>
           {tokens.map((line, i) => (
             <div {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
