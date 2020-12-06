@@ -8,8 +8,12 @@
   font-family: "Open Sans", sans-serif;
 }
 
+aside li > a:hover {
+  @apply bg-blue-400;
+}
+
 aside li > a {
-  @apply block px-6;
+  @apply w-full block py-2 px-4;
 }
 
 /* Markdown */
