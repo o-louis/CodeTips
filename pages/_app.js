@@ -4,7 +4,7 @@ import "../styles/tailwind.css";
 const App = ({ Component, pageProps }) => {
   return (
     <Layout
-      pageTitle="Code Daily"
+      pageTitle="Best practices, Must-Know, Useful Tips in JavaScript"
       description="Best practices, Must-Know, Useful Tips in JavaScript"
     >
       <Component {...pageProps} />
