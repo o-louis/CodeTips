@@ -16,9 +16,9 @@ const Index = () => {
           </div>
           <section className="md:max-w-xl lg:text-xl">
             <p className="pt-6 pb-6 leading-relaxed">
-              As a developer, we spend our time searching on google (even basic
-              concepts..) and thus I've decided to create a census that gather
-              all the JavaScript Fundamentals for saving time.
+              As a developer, we spend our time googling, even basic
+              concepts. Therefore I've decided to create a list that gathers
+              all the JavaScript Fundamentals to save time.
             </p>
             <p>
               I hope you'll find everything you're looking for and more ! 🚀
