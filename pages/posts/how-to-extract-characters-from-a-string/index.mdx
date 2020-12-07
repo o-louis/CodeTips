@@ -1,0 +1,22 @@
+import BlogPost from "../../../components/BlogPost";
+import Code from "../../../components/Code";
+
+export const meta = {
+  title: "How to extract characters from a string"
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+[substr](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr) begins at the character at a specified position and returns the specified number of characters.
+
+[substring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) returns the part of the string between the start and end indexes, or to the end of the string.
+
+<Code>{
+`const sentence = "Hello World !";\n
+// 1. substr(start, length)
+const word = sentence.substr(6, 5);\n
+// 2. substring(start, end)
+const word = sentence.substring(6, 11);\n
+console.log(word);
+// expected output: "World"`
+}</Code>
