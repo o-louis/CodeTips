@@ -1,0 +1,21 @@
+import BlogPost from "../../../components/BlogPost";
+import Code from "../../../components/Code";
+
+export const meta = {
+  title: "How to remove duplicates from an array"
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+You can use [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) object.
+It is a data structure that lets you store unique values of any type. Therefore it will remove duplicates by itself.
+
+<Code>{
+`const  numbers = [2, 7, 8, 2, 5, 1, 5];\n
+// 1. Using Array.from
+const unique = Array.from(new Set(numbers));\n
+// 2. Using spread operator
+const unique = [...new Set(numbers)];\n
+console.log(unique);
+// expected output: [2, 7, 8, 5, 1]`
+}</Code>
