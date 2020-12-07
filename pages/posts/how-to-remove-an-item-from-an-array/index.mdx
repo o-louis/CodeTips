@@ -1,0 +1,36 @@
+import BlogPost from "../../../components/BlogPost";
+import Code from "../../../components/Code";
+
+export const meta = {
+  title: "How to remove an item from an array"
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+1. Remove the first element - [shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+<Code>{
+`const list = ["knife", "bottle", "keyboard", "table", "tv"];
+list.shift(); // ["bottle", "keyboard", "table", "tv"]`
+}</Code>
+
+2. Remove the last element - [pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+<Code>{
+`const list = ["knife", "bottle", "keyboard", "table", "tv"];
+list.pop(); // ["knife", "bottle", "keyboard", "table"]`
+}</Code>
+
+3. Remove from a specific index - [splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+<Code>{
+`const arr = ["toto", "tata", "tutu", "tete"];
+const index = 2;
+arr.splice(index, 1); // ["toto", "tata", "tete"]`
+}</Code>
+
+4. Remove element by value - [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+<Code>{
+`const fruits = ["apple", "orange", "pear", "banana", "coconut", "peach"];
+const fruitToRemove = "pear";
+const filtered = fruits.filter(item => item !== fruitToRemove);\n
+console.log(filtered);
+// expected output: ["apple", "orange", "banana", "coconut", "peach"]`
+}</Code>
