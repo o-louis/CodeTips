@@ -1,0 +1,22 @@
+import BlogPost from "../../../components/BlogPost";
+import Code from "../../../components/Code";
+
+export const meta = {
+  title: "How to copy or clone an array"
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+Here are techniques to do it without mutate the initial array with [concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) or [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+
+<Code>{
+`const numbers = [2, 4, 6, 8, 10];\n
+// 1. with concat
+const copy = [].concat(numbers);\n
+// 2. with slice
+const copy = numbers.slice();\n
+// 2. with spread operator
+const copy = [...numbers];\n
+console.log(copy);
+// expected output: [2, 4, 6, 8, 10]`
+}</Code>
