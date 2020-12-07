@@ -1,0 +1,17 @@
+import BlogPost from "../../../components/BlogPost";
+import Code from "../../../components/Code";
+
+export const meta = {
+  title: "How to create a new array with map()"
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+[Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) return a new array from the initial one where the result is building by perfoming anything on each element.
+
+<Code>
+  {`const numbers = [1, 2, 3, 4, 5, 6];
+const even = numbers.map(number => number*2);\n
+console.log(even);
+// expected output: [2, 4, 6, 8, 10, 12]`}
+</Code>
