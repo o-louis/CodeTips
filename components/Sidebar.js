@@ -5,7 +5,7 @@ const Sidebar = ({ showMenu, closeMenu }) => {
   return (
     <aside
       className={
-        "transition-transform duration-300 transform flex flex-col fixed top-0 w-3/4 h-screen shadow-lg bg-blue-500 text-white py-3 max-w-xs sm:w-2/4 md:inline-block md:translate-x-0 " +
+        "transition-transform duration-300 transform flex flex-col fixed top-0 w-3/4 h-screen shadow-lg bg-blue-500 text-white py-3 max-w-xs sm:w-2/4 md:inline-block md:translate-x-0 overflow-y-scroll " +
         (showMenu ? "translate-x-0" : "-translate-x-full")
       }
     >
