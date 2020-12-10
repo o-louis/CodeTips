@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { posts } from "../getAllPosts";
+import { folders } from "../getAllPosts";
 
 const Sidebar = ({ showMenu, closeMenu }) => {
-  console.log(posts);
   return (
     <aside
       className={
@@ -20,17 +19,27 @@ const Sidebar = ({ showMenu, closeMenu }) => {
           height="32"
         />
       </div>
-      <ul>
-        {posts.map((post) => (
-          <li
-            className="text-sm transition-colors ease-in-out font-semibold"
-            key={post.link}
-            onClick={closeMenu}
-          >
-            <Link href={"/posts" + post.link}>{post.module.meta.title}</Link>
-          </li>
-        ))}
-      </ul>
+
+      {folders.map((folder) => (
+        <div className="text-sm px-4 w-full" key={folder.name}>
+          <span className="font-bold text-base uppercase text-yellow-200 w-full flex">
+            {folder.name}
+          </span>
+          <ul>
+            {folder.posts.map((post) => (
+              <li
+                className="transition-colors ease-in-out font-semibold"
+                key={post.link}
+                onClick={closeMenu}
+              >
+                <Link href={"/posts" + post.link}>
+                  {post.module.meta.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </aside>
   );
 };
