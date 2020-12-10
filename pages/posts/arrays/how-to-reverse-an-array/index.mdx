@@ -1,5 +1,5 @@
-import BlogPost from "../../../components/BlogPost";
-import Code from "../../../components/Code";
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
 
 export const meta = {
   title: "How to reverse an array",
@@ -9,9 +9,7 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 
 You can reverse an array by simply using the function [reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse).
 
-<Code>{
-`const colors = ["red", "green", "blue", "white"];
+<Code>{`const colors = ["red", "green", "blue", "white"];
 colors.reverse();\n
 console.log(colors);
-// expected output: ["white", "blue", "green", "red"]`
-}</Code>
+// expected output: ["white", "blue", "green", "red"]`}</Code>

@@ -1,20 +1,18 @@
-import BlogPost from "../../../components/BlogPost";
-import Code from "../../../components/Code";
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
 
 export const meta = {
-  title: "How to check if a value exists in an array"
+  title: "How to check if a value exists in an array",
 };
 
 export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 
 There are multiple methods to check if an array contains a value :
 
-<Code>{
-`const sports = ["soccer", "hockey", "basketball", "baseball", "ski"];\n
+<Code>{`const sports = ["soccer", "hockey", "basketball", "baseball", "ski"];\n
 //1. with indexOf
 sports.indexOf("hockey") !== -1 // true\n
 // 2. with includes
 sports.includes("hockey"); // true\n
 // 3. with some
-sports.some(sport => sport === 'hockey'); // true\n`
-}</Code>
+sports.some(sport => sport === 'hockey'); // true\n`}</Code>
