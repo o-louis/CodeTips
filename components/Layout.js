@@ -6,6 +6,7 @@ import React, { useState } from "react";
 
 const Layout = ({ children, pageTitle, description }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const openMenu = () => {
     setShowMenu(true);
@@ -13,6 +14,10 @@ const Layout = ({ children, pageTitle, description }) => {
 
   const closeMenu = () => {
     setShowMenu(false);
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode((theme) => !theme);
   };
 
   return (
@@ -30,7 +35,11 @@ const Layout = ({ children, pageTitle, description }) => {
       <div className="flex w-full">
         <Sidebar showMenu={showMenu} closeMenu={closeMenu} />
         <div className="w-full md:ml-60">
-          <Header openMenu={openMenu} />
+          <Header
+            openMenu={openMenu}
+            darkMode={darkMode}
+            toggleDarkMode={toggleDarkMode}
+          />
           <div className="">{children}</div>
         </div>
       </div>
