@@ -1,0 +1,17 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to find an object by specific value from an array",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+We use [find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) which is a function that returns the first value in the array that passes the provided testing function.
+
+<Code>{`const users = [
+  { id: 1, name: 'Pedro' },
+  { id: 2, name: 'Clara' },
+  { id: 3, name: 'Rodriguez' }
+];\n
+users.find(user => user.id === 2); // { id: 2, name: 'Clara' }`}</Code>
