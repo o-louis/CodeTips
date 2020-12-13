@@ -1,0 +1,16 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to store data in localStorage",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+[localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) property allows you to access a Storage object for the document's origin.
+
+<Code>{`
+// Retrieve key data
+localStorage.getItem("key");
+// Set key to value
+localStorage.setItem("key", "value");`}</Code>
