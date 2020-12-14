@@ -1,0 +1,15 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to store data in localStorage",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+[localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) property allows you to save data with no expiration data in a web browser.
+
+<Code>{`// Retrieve value of the specified storage object
+localStorage.getItem("toys");\n
+// Set value of the specified storage object
+localStorage.setItem("toys", "bike");`}</Code>
