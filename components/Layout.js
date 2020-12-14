@@ -2,11 +2,20 @@ import Head from "next/head";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Layout = ({ children, pageTitle, description }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const bodyTag = document.querySelector("body");
+    if (darkMode) {
+      bodyTag.classList.add("dark");
+    } else {
+      bodyTag.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   const openMenu = () => {
     setShowMenu(true);
