@@ -1,0 +1,20 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to convert a string to a number",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+It exists many solutions but I'll propose you 3 common ways.
+
+<Code>{`let str = '25';\n
+// 1. with Number
+str = Number(str);\n
+// 2. with parseInt or parseFloat
+str = parseInt(str, 10);
+str = parseFloat('25.00')\n
+// 3. with +
+str = +str;
+`}</Code>
