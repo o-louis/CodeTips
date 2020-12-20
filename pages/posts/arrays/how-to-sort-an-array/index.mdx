@@ -1,0 +1,20 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to sort an array",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+By default, [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) function sorts an array alphabetically regarding their UTF-16 code units values.
+You can also sort it by using a compare function.
+See some examples below:
+
+<Code>{`const names = ['Xavier', 'Alex', 'Yuri', 'John'];
+names.sort(); // ['Alex', 'John', 'Xavier', 'Yuri'];\n
+const points = [100, 3, 78, 30, 1, 97];
+// sort by ascending order
+points.sort((a, b) => (a - b)); // [1, 3, 30, 78, 97, 100]
+// sort by descending order
+points.sort((a, b) => (a > b ? -1 : 1)); // [100, 97, 78, 30, 3, 1]`}</Code>
