@@ -10,7 +10,7 @@ const Layout = ({ children, pageTitle, description }) => {
 
   useEffect(() => {
     const parent = document.querySelector("body");
-    const children = document.querySelector("#__next > div:first-child")
+    const children = document.querySelector("#__next > div:first-child");
     if (darkMode) {
       parent.classList.add("dark");
       children.classList.add("dark");
@@ -45,7 +45,12 @@ const Layout = ({ children, pageTitle, description }) => {
         <title>{pageTitle}</title>
       </Head>
       <div className="flex w-full h-full dark:bg-gray-900">
-        <Sidebar showMenu={showMenu} closeMenu={closeMenu} />
+        <Sidebar
+          showMenu={showMenu}
+          closeMenu={closeMenu}
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
         <div className="w-full md:ml-60">
           <Header
             openMenu={openMenu}
