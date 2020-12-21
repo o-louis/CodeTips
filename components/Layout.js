@@ -9,11 +9,14 @@ const Layout = ({ children, pageTitle, description }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const bodyTag = document.querySelector("body");
+    const parent = document.querySelector("body");
+    const children = document.querySelector("#__next > div:first-child")
     if (darkMode) {
-      bodyTag.classList.add("dark");
+      parent.classList.add("dark");
+      children.classList.add("dark");
     } else {
-      bodyTag.classList.remove("dark");
+      parent.classList.remove("dark");
+      children.classList.remove("dark");
     }
   }, [darkMode]);
 
@@ -41,7 +44,7 @@ const Layout = ({ children, pageTitle, description }) => {
         ></link>
         <title>{pageTitle}</title>
       </Head>
-      <div className="flex w-full">
+      <div className="flex w-full h-full dark:bg-gray-900">
         <Sidebar showMenu={showMenu} closeMenu={closeMenu} />
         <div className="w-full md:ml-60">
           <Header
@@ -49,7 +52,7 @@ const Layout = ({ children, pageTitle, description }) => {
             darkMode={darkMode}
             toggleDarkMode={toggleDarkMode}
           />
-          <div className="">{children}</div>
+          <div className="dark:bg-gray-900">{children}</div>
         </div>
       </div>
     </>

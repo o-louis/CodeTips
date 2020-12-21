@@ -8,8 +8,16 @@
   font-family: "Open Sans", sans-serif;
 }
 
+html, body, #__next {
+  height: 100%;
+}
+
 aside li > a:hover {
   @apply bg-blue-400;
+}
+
+.dark aside li > a:hover {
+  @apply bg-gray-700;
 }
 
 aside li > a {
