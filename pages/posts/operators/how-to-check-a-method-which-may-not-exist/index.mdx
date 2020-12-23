@@ -1,0 +1,17 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to check a method which may not exist",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+[Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) allows you to access the value of a property located deep within a chain of objects which might currently be null or undefined.
+
+<Code>{
+`const user = { name: 'James', age: 24, country: 'UK', payment: {}};\n
+const country = user?.country; // UK
+const cardNumber = user?.payment?.card_number; // undefined
+const isLogged = user?.login?.(); // undefined`
+}</Code>
