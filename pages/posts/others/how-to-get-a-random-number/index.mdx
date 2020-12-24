@@ -1,0 +1,17 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to get a random number",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+1. Between 0 and max
+<Code>{`const randomNumber = Math.floor(Math.random() * max);`}</Code>
+
+2. Between min included and max excluded
+<Code>{`const randomNumber = Math.floor(Math.random() * (max - min) + min);`}</Code>
+
+3. Between min included and max included
+<Code>{`const randomNumber = Math.round(Math.random() * (max - min) + min);`}</Code>
