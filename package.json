@@ -11,10 +11,9 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.21",
     "@next/mdx": "^10.0.1",
-    "@tailwindcss/ui": "^0.7.2",
-    "autoprefixer": "^10.1.0",
+    "autoprefixer": "^10.2.3",
     "next": "10.0.1",
-    "postcss": "^8.2.1",
+    "postcss": "^8.2.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "prism-react-renderer": "^1.1.1",
     "react": "17.0.1",
