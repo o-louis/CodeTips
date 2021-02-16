@@ -8,7 +8,12 @@
   font-family: "Open Sans", sans-serif;
 }
 
-html, body, #__next {
+html {
+  height: 100%;
+}
+
+body,
+#__next {
   height: 100%;
 }
 
