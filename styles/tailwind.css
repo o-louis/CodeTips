@@ -8,13 +8,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
-html {
-  height: 100%;
-}
-
+html,
 body,
 #__next {
-  height: 100%;
+  @apply h-full;
 }
 
 aside li > a:hover {
