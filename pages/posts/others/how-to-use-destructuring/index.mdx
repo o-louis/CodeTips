@@ -1,0 +1,32 @@
+import BlogPost from "../../../../components/BlogPost";
+import Code from "../../../../components/Code";
+
+export const meta = {
+  title: "How to use destructuring",
+};
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+[Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) is a Javascript Expression that allows you to assign properties of object or array into distinct variables.
+
+Array destructuring:
+
+<Code>
+  {`const users = ["rob", "john"];
+const [admin, guest] = users;
+console.log(admin, guest);
+// expected output: rob john`}
+</Code>
+
+Oject destructuring:
+
+<Code>
+  {`const vehicles = {
+  car: "bmw",
+  moto: "harley davidson",
+  truck: "chevrolet"
+};
+const { car, moto, truck } = vehicles;
+console.log(car, moto, truck);
+// expected output: bmw harley davidson chevrolet`}
+</Code>
