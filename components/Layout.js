@@ -51,7 +51,7 @@ const Layout = ({ children, pageTitle, description }) => {
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
         />
-        <div className="w-full md:ml-80">
+        <div className="w-full md:ml-60">
           <Header
             openMenu={openMenu}
             darkMode={darkMode}
