@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+/* purgecss start ignore */
+@tailwind base;
 html,
 body,
 #__next {
-  @apply h-screen;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
-
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+/* Markdown */
+.syntaxhighlighter {
+  white-space: pre-wrap !important;
+}
+/* purgecss end ignore */
+@tailwind components;
+@tailwind utilities;
 
 aside li > a:hover {
   @apply bg-blue-400;
@@ -24,11 +32,6 @@ aside li > a:hover {
 
 aside li > a {
   @apply block w-full px-4 py-2;
-}
-
-/* Markdown */
-.syntaxhighlighter {
-  white-space: pre-wrap !important;
 }
 
 article li,
