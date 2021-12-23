@@ -1,18 +1,17 @@
-/* purgecss start ignore */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-@import 'tailwindcss/base';
-/* purgecss end ignore */
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
-* {
-  font-family: 'Open Sans', sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body,
 #__next {
   @apply h-screen;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
 }
 
 aside li > a:hover {
