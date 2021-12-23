@@ -3,17 +3,17 @@ import Link from 'next/link';
 import React from 'react';
 import { folders } from '../getAllPosts';
 
-const Sidebar = ({ showMenu, closeMenu, darkMode, toggleDarkMode }) => {
+const Sidebar = ({ isMenuOpened, toggleMenu, darkMode, toggleDarkMode }) => {
   return (
     <aside
       className={
         'fixed top-0 z-10 flex flex-col w-3/4 h-screen max-w-xs py-3 overflow-y-auto text-white transition-transform duration-300 transform bg-blue-500 shadow-lg sm:w-2/4 md:inline-block md:translate-x-0 dark:bg-gray-900 ' +
-        (showMenu ? 'translate-x-0' : '-translate-x-full')
+        (isMenuOpened ? 'translate-x-0' : '-translate-x-full')
       }
     >
       <div
         className="relative self-end p-1 rounded-full cursor-pointer right-3 hover:bg-blue-500 md:hidden"
-        onClick={closeMenu}
+        onClick={toggleMenu}
       >
         <Image
           src="https://s.svgbox.net/hero-outline.svg?ic=x&fill=ffffff"
@@ -69,7 +69,7 @@ const Sidebar = ({ showMenu, closeMenu, darkMode, toggleDarkMode }) => {
               <li
                 className="font-semibold transition-colors ease-in-out dark:text-gray-300"
                 key={post.link}
-                onClick={closeMenu}
+                onClick={toggleMenu}
               >
                 <Link href={'/posts' + post.link}>
                   {post.module.meta.title}

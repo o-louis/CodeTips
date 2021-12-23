@@ -2,17 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const Header = ({ openMenu, darkMode, toggleDarkMode }) => {
+const Header = ({ toggleMenu, darkMode, toggleDarkMode }) => {
   return (
-    <nav className="py-3 bg-blue-100 text-blue-600 text-xl w-full dark:text-white dark:bg-gray-900">
-      <div className="m-auto w-10/12 flex justify-between items-center md:w-11/12">
+    <nav className="w-full py-3 text-xl text-blue-600 bg-blue-100 dark:text-white dark:bg-gray-900">
+      <div className="flex items-center justify-between w-10/12 m-auto md:w-11/12">
         <div className="font-bold ">
           <Link href="/">CodeTips</Link>
         </div>
 
         {darkMode ? (
           <svg
-            className="w-6 h-6 hidden md:inline-block md:cursor-pointer md:text-blue-300 md:hover:text-blue-600"
+            className="hidden w-6 h-6 md:inline-block md:cursor-pointer md:text-blue-300 md:hover:text-blue-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -28,7 +28,7 @@ const Header = ({ openMenu, darkMode, toggleDarkMode }) => {
           </svg>
         ) : (
           <svg
-            className="w-6 h-6 hidden md:inline-block md:cursor-pointer md:text-blue-300 md:hover:text-blue-600"
+            className="hidden w-6 h-6 md:inline-block md:cursor-pointer md:text-blue-300 md:hover:text-blue-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -44,8 +44,8 @@ const Header = ({ openMenu, darkMode, toggleDarkMode }) => {
           </svg>
         )}
         <div
-          className="rounded-full p-1 cursor-pointer hover:bg-gray-50 md:hidden"
-          onClick={openMenu}
+          className="p-1 rounded-full cursor-pointer hover:bg-gray-50 md:hidden"
+          onClick={toggleMenu}
         >
           <Image
             src="https://s.svgbox.net/hero-outline.svg?ic=menu-alt-3&fill=1c64f2"
