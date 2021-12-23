@@ -12,6 +12,6 @@ module.exports = {
     'tailwindcss',
     'autoprefixer',
     // eslint-disable-next-line no-undef
-    ...(process.env.NODE_ENV === 'production' ? [purgecss, require('cssnano')] : []),
+    ...(process.env.NODE_ENV === 'production' ? [purgecss, 'cssnano'] : []),
   ],
 };
