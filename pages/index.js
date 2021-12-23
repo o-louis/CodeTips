@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Index = () => {
   return (
     <div className="py-8">
@@ -17,11 +19,11 @@ const Index = () => {
           <section className="md:max-w-xl lg:text-xl dark:text-white">
             <p className="pt-6 pb-6 leading-relaxed">
               As a developer, we spend our time googling, even basic
-              concepts. Therefore I've decided to create a list that gathers
+              concepts. Therefore I&apos;ve decided to create a list that gathers
               all the JavaScript Fundamentals to save time.
             </p>
             <p>
-              I hope you'll find everything you're looking for and more ! 🚀
+              I hope you&apos;ll find everything you&apos;re looking for and more ! 🚀
             </p>
           </section>
         </div>

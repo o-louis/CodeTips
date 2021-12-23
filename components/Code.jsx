@@ -1,5 +1,6 @@
-import Highlight, { defaultProps } from "prism-react-renderer";
-import dracula from "prism-react-renderer/themes/dracula";
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import dracula from 'prism-react-renderer/themes/dracula';
+import React from 'react';
 
 export default function Code({ children }) {
   return (
@@ -15,9 +16,9 @@ export default function Code({ children }) {
           style={style}
         >
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
+            <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
+                <span key={key} {...getTokenProps({ token, key })} />
               ))}
             </div>
           ))}

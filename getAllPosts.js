@@ -1,5 +1,5 @@
 function importAll(r) {
-  let folders = r.keys().map((post) => post.split("/")[1]);
+  let folders = r.keys().map((post) => post.split('/')[1]);
   folders = [...new Set(folders)].map((folder) => ({
     name: folder,
     posts: [],
@@ -7,7 +7,7 @@ function importAll(r) {
 
   const articles = r.keys().map((fileName) => {
     return {
-      link: fileName.substr(1).replace(/\/index\.mdx$/, ""),
+      link: fileName.substr(1).replace(/\/index\.mdx$/, ''),
       module: r(fileName),
     };
   });
@@ -23,5 +23,5 @@ function importAll(r) {
 }
 
 export const folders = importAll(
-  require.context("./pages/posts/", true, /\.mdx$/)
+  require.context('./pages/posts/', true, /\.mdx$/)
 );

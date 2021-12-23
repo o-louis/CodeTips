@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "lint": "next lint"
   },
   "dependencies": {
     "@mdx-js/loader": "^0.15.4",
@@ -22,6 +23,8 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-react": "^7.27.1",
     "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^2.2.19"

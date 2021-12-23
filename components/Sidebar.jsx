@@ -1,12 +1,13 @@
-import Link from "next/link";
-import { folders } from "../getAllPosts";
+import Link from 'next/link';
+import React from 'react';
+import { folders } from '../getAllPosts';
 
 const Sidebar = ({ showMenu, closeMenu, darkMode, toggleDarkMode }) => {
   return (
     <aside
       className={
-        "transition-transform duration-300 transform flex flex-col fixed top-0 w-3/4 h-screen shadow-lg bg-blue-500 text-white py-3 max-w-xs sm:w-2/4 md:inline-block md:translate-x-0 overflow-y-auto dark:bg-gray-900 " +
-        (showMenu ? "translate-x-0" : "-translate-x-full")
+        'transition-transform duration-300 transform flex flex-col fixed top-0 w-3/4 h-screen shadow-lg bg-blue-500 text-white py-3 max-w-xs sm:w-2/4 md:inline-block md:translate-x-0 overflow-y-auto dark:bg-gray-900 ' +
+        (showMenu ? 'translate-x-0' : '-translate-x-full')
       }
     >
       <div
@@ -68,7 +69,7 @@ const Sidebar = ({ showMenu, closeMenu, darkMode, toggleDarkMode }) => {
                 key={post.link}
                 onClick={closeMenu}
               >
-                <Link href={"/posts" + post.link}>
+                <Link href={'/posts' + post.link}>
                   {post.module.meta.title}
                 </Link>
               </li>

@@ -1,22 +1,21 @@
-import Head from "next/head";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-
-import React, { useState, useEffect } from "react";
+import Head from 'next/head';
+import React, { useEffect, useState } from 'react';
+import Header from './Header';
+import Sidebar from './Sidebar';
 
 const Layout = ({ children, pageTitle, description }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const parent = document.querySelector("body");
-    const children = document.querySelector("#__next > div:first-child");
+    const parent = document.querySelector('body');
+    const children = document.querySelector('#__next > div:first-child');
     if (darkMode) {
-      parent.classList.add("dark");
-      children.classList.add("dark");
+      parent.classList.add('dark');
+      children.classList.add('dark');
     } else {
-      parent.classList.remove("dark");
-      children.classList.remove("dark");
+      parent.classList.remove('dark');
+      children.classList.remove('dark');
     }
   }, [darkMode]);
 
