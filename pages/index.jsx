@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import React from 'react';
+import illustrationHome from '../public/illustration_home.png';
 
 const Index = () => {
   return (
@@ -14,16 +16,17 @@ const Index = () => {
 
         <div className="flex flex-col md:flex-col-reverse">
           <div className="pt-4 max-w-sm self-end md:max-w-md">
-            <img src="./illustration_home.png" />
+            <Image src={illustrationHome} alt="Home Illustration" />
           </div>
           <section className="md:max-w-xl lg:text-xl dark:text-white">
             <p className="pt-6 pb-6 leading-relaxed">
-              As a developer, we spend our time googling, even basic
-              concepts. Therefore I&apos;ve decided to create a list that gathers
-              all the JavaScript Fundamentals to save time.
+              As a developer, we spend our time googling, even basic concepts.
+              Therefore I&apos;ve decided to create a list that gathers all the
+              JavaScript Fundamentals to save time.
             </p>
             <p>
-              I hope you&apos;ll find everything you&apos;re looking for and more ! 🚀
+              I hope you&apos;ll find everything you&apos;re looking for and
+              more ! 🚀
             </p>
           </section>
         </div>

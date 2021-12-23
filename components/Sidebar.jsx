@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { folders } from '../getAllPosts';
@@ -6,25 +7,26 @@ const Sidebar = ({ showMenu, closeMenu, darkMode, toggleDarkMode }) => {
   return (
     <aside
       className={
-        'transition-transform duration-300 transform flex flex-col fixed top-0 w-3/4 h-screen shadow-lg bg-blue-500 text-white py-3 max-w-xs sm:w-2/4 md:inline-block md:translate-x-0 overflow-y-auto dark:bg-gray-900 ' +
+        'fixed top-0 z-10 flex flex-col w-3/4 h-screen max-w-xs py-3 overflow-y-auto text-white transition-transform duration-300 transform bg-blue-500 shadow-lg sm:w-2/4 md:inline-block md:translate-x-0 dark:bg-gray-900 ' +
         (showMenu ? 'translate-x-0' : '-translate-x-full')
       }
     >
       <div
-        className="self-end relative right-3 cursor-pointer rounded-full p-1 hover:bg-blue-500 md:hidden"
+        className="relative self-end p-1 rounded-full cursor-pointer right-3 hover:bg-blue-500 md:hidden"
         onClick={closeMenu}
       >
-        <img
+        <Image
           src="https://s.svgbox.net/hero-outline.svg?ic=x&fill=ffffff"
           width="32"
           height="32"
+          alt="Close Menu Icon"
         />
       </div>
 
-      <div className="w-6 h-6 absolute right-16 top-5 md:hidden">
+      <div className="absolute w-6 h-6 right-16 top-5 md:hidden">
         {darkMode ? (
           <svg
-            className="cursor-pointer text-blue-300 hover:text-blue-600"
+            className="text-blue-300 cursor-pointer hover:text-blue-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -40,7 +42,7 @@ const Sidebar = ({ showMenu, closeMenu, darkMode, toggleDarkMode }) => {
           </svg>
         ) : (
           <svg
-            className="cursor-pointer text-white hover:text-blue-600"
+            className="text-white cursor-pointer hover:text-blue-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -58,14 +60,14 @@ const Sidebar = ({ showMenu, closeMenu, darkMode, toggleDarkMode }) => {
       </div>
 
       {folders.map((folder) => (
-        <div className="text-sm px-4 w-full" key={folder.name}>
-          <span className="font-bold text-base uppercase text-yellow-200 w-full flex dark:text-gray-100">
+        <div className="w-full px-4 text-sm" key={folder.name}>
+          <span className="flex w-full text-base font-bold text-yellow-200 uppercase dark:text-gray-100">
             {folder.name}
           </span>
           <ul>
             {folder.posts.map((post) => (
               <li
-                className="transition-colors ease-in-out font-semibold dark:text-gray-300"
+                className="font-semibold transition-colors ease-in-out dark:text-gray-300"
                 key={post.link}
                 onClick={closeMenu}
               >

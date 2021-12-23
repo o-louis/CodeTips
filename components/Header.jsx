@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -46,10 +47,11 @@ const Header = ({ openMenu, darkMode, toggleDarkMode }) => {
           className="rounded-full p-1 cursor-pointer hover:bg-gray-50 md:hidden"
           onClick={openMenu}
         >
-          <img
+          <Image
             src="https://s.svgbox.net/hero-outline.svg?ic=menu-alt-3&fill=1c64f2"
             width="32"
             height="32"
+            alt="Menu Icon"
           />
         </div>
       </div>

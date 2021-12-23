@@ -1,4 +1,9 @@
 module.exports = {
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   'env': {
     'browser': true,
     'commonjs': true,
@@ -6,6 +11,7 @@ module.exports = {
   },
   'extends': [
     'eslint:recommended',
+    'plugin:@next/next/recommended',
     'plugin:react/recommended'
   ],
   'parserOptions': {
