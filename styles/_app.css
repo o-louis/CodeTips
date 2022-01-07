@@ -3,7 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html,
+body,
+#__next {
   height: 100vh;
   margin: 0;
   padding: 0;
