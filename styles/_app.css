@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
-/* purgecss start ignore */
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body,
 #__next {
@@ -9,16 +11,15 @@ body,
   margin: 0;
   padding: 0;
 }
+
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
 /* Markdown */
 .syntaxhighlighter {
   white-space: pre-wrap !important;
 }
-/* purgecss end ignore */
-@tailwind components;
-@tailwind utilities;
 
 aside li > a:hover {
   @apply bg-blue-400;
