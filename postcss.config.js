@@ -1,17 +1,28 @@
-const purgecss = [
-  '@fullhuman/postcss-purgecss',
-  {
-    content: ['./components/**/*.jsx', './pages/**/*.jsx'],
-    defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-  },
-];
+/* eslint-disable no-undef */
+const plugins = {
+  'postcss-import': {},
+  'tailwindcss': {},
+  'autoprefixer': {},
+};
+
+if (process.env.NODE_ENV === 'production') {
+  plugins['@fullhuman/postcss-purgecss'] = {
+    content: [
+      'pages/**/*.jsx',
+      'components/**/*.jsx',
+    ],
+    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
+  };
+
+  plugins['cssnano'] = {
+    preset: ['default', {
+      discardComments: {
+        removeAll: true,
+      },
+    }],
+  };
+}
 
 module.exports = {
-  plugins: [
-    'postcss-import',
-    'tailwindcss',
-    'autoprefixer',
-    // eslint-disable-next-line no-undef
-    ...(process.env.NODE_ENV === 'production' ? [purgecss, 'cssnano'] : []),
-  ],
+  plugins,
 };

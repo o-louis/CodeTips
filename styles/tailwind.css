@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
+/* purgecss start ignore */
+@tailwind base;
 html,
 body,
 #__next {
@@ -10,14 +12,10 @@ body,
 * {
   font-family: 'Open Sans', sans-serif;
 }
-
 /* Markdown */
 .syntaxhighlighter {
   white-space: pre-wrap !important;
 }
-
-/* purgecss start ignore */
-@tailwind base;
 /* purgecss end ignore */
 @tailwind components;
 @tailwind utilities;
